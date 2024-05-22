@@ -1,0 +1,32 @@
+emplicacion punto 5
+
+Carga de los datos: Utilizamos la función read_excel del paquete readxl para cargar los datos del archivo "air-bnb-listings 2.xlsx" en un objeto llamado airbnb_data.
+
+Visualización de las primeras filas: Usamos la función head para visualizar las primeras filas del conjunto de datos y entender su estructura y contenido.
+
+Resumen de las características principales: Empleamos la función summary para obtener un resumen estadístico de las variables numéricas en el conjunto de datos, lo que nos proporciona información sobre la distribución y tendencias de los datos.
+
+Dimensiones del conjunto de datos: Utilizamos la función dim para obtener el número de filas y columnas en el conjunto de datos, lo que nos ayuda a entender su tamaño y alcance.
+
+Tipos de datos de cada columna: Utilizamos la función str para obtener información sobre los tipos de datos de cada columna en el conjunto de datos, lo que nos permite identificar si hay variables categóricas o numéricas.
+
+División del conjunto de datos en conjuntos de entrenamiento y prueba: Utilizamos la función sample para seleccionar aleatoriamente un conjunto de índices para los datos de entrenamiento, luego utilizamos estos índices para dividir el conjunto de datos en un conjunto de entrenamiento (80% de los datos) y un conjunto de prueba (20% de los datos).
+
+Preprocesamiento de datos:
+
+Eliminación de columnas irrelevantes: Utilizamos la función subset para eliminar las columnas que consideramos irrelevantes para el modelado.
+Imputación de valores faltantes: Utilizamos la función mean para calcular la media de la columna "Room Price" y luego reemplazar los valores faltantes en esa columna con la media calculada.
+Transformación de variables categóricas a numéricas:
+
+Convertir la columna Room_type en variables dummy: Utilizamos la función model.matrix para crear variables dummy a partir de la columna "Room type", lo que nos permite incluir variables categóricas en el modelo de regresión lineal.
+Modelado: Algoritmo de regresión lineal: Utilizamos la función lm para ajustar un modelo de regresión lineal a los datos de entrenamiento, utilizando las variables predictoras seleccionadas.
+
+Resumen del modelo: Utilizamos la función summary para obtener un resumen detallado del modelo de regresión lineal ajustado, lo que nos proporciona información sobre los coeficientes estimados, el error estándar, los valores p, etc.
+
+Predicción: Aplicar el modelo a los datos de prueba: Utilizamos la función predict para hacer predicciones del precio de la habitación utilizando el modelo ajustado y los datos de prueba.
+
+Validación del modelo: Calculamos el error cuadrático medio (MSE) y el coeficiente de determinación (R^2) para evaluar el rendimiento del modelo utilizando las predicciones y los datos de prueba.
+
+Resultados: Imprimimos el MSE y R^2 para comunicar el rendimiento del modelo y su capacidad para predecir con precisión los precios de las habitaciones.
+
+Cada uno de estos pasos es esencial para comprender, preprocesar, modelar y evaluar los datos, y proporciona una base sólida para la toma de decisiones y la comunicación de los resultados en una presentación.

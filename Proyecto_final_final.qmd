@@ -30,19 +30,86 @@ airbnb[ , numeric_cols] <- lapply(airbnb[ , numeric_cols], function(x) {
 	})
 ```
 
--   Identificamos los outliners
--- en Room price
+-   Identificar los outliers en la variable Room Price
 
 ```{r}
-+		outliers <- boxplot.stats(airbnb$`Room Price`)$out
+outliers <- boxplot.stats(airbnb$`Room Price`)$out
+```
+
+-   Mostrar los outliers
+
+```{r}
+outliers
 ```
 
 -- en Minimum nights
 
 ```{r}
-		outliers <- boxplot.stats(airbnb$`Minimum nights`)$out
+outliers <- boxplot.stats(airbnb$`Minimum nights`)$out
 ```
 
+-   Mostrar los outliers
 
+```{r}
+outliers
+```
 
+-   Crear un boxplot para visualizar la distribución de los precios de habitaciones por tipo de habitación
 
+```{r}
+library(ggplot2)
+ggplot(airbnb, aes(x = `Room type`, y = `Room Price`)) +
+  geom_boxplot() +
+  labs(x = "Tipo de Habitación", y = "Precio de Habitación") +
+  theme_minimal()
+```
+
+```{r}
+library(ggplot2)
+ggplot(airbnb, aes(x = `Room Price`, y = `Availibility`)) +
+  geom_boxplot() +
+  labs(x = "Precio de Habitacion", y = "Disponibilidad") +
+  theme_minimal()
+```
+
+```{r}
+library(ggplot2)
+ggplot(airbnb, aes(x = `Room type`, y = `Availibility`)) +
+  geom_boxplot() +
+  labs(x = "Tipo de Habitación", y = "Disponibilidad") +
+  theme_minimal()
+```
+
+```{r}
+library(ggplot2)
+ggplot(airbnb, aes(x = `Neighbourhood`, y = `Room Price`)) +
+  geom_boxplot() +
+  labs(x = "Barrios", y = "Precio de Habitacion") +
+  theme_minimal()
+```
+
+- Histograma para la variable "Room Price"
+```{r}
+hist(airbnb$`Room Price`,
+     main = "Distribución de Precios de Habitaciones",
+     xlab = "Precio de la Habitación (€)",
+     ylab = "Frecuencia",
+     col = "skyblue",
+     border = "black",
+     xlim = c(0, 6000),
+     breaks = 500
+)
+```
+
+- Histograma para la variable "Room Price"
+```{r}
+hist(airbnb$`Availibility`,
+     main = "Disponibilidad de habitaciones",
+     xlab = "Disponibilidad",
+     ylab = "Unidades",
+     col = "skyblue",
+     border = "black",
+     xlim = c(0, 400),
+     breaks = 20
+)
+```
