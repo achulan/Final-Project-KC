@@ -1,0 +1,29 @@
+REDACCION DEL PROYECTO
+
+- Borrado de nulls, limpiar los datos para su uso correcto. 
+ - 3 a y b y d son los 'mismo'
+ - 3 c; usar uno o dar para el calculo de los KPIs
+
+
+------------------------------------------------------------
+
+- abrimos el air_bnb_listings
+	airbnb <- read_excel("air-bnb-listings 2.xlsx", na = "")
+
+-comprobamos los que tienen un 0 y lo cambiamos por NA
+	airbnb[airbnb == 0] <- NA
+
+- Identificar columnas numéricas
+	numeric_cols <- sapply(airbnb, is.numeric)
+
+- Imputamos valores nulos solo en columnas numéricas
+	airbnb[ , numeric_cols] <- lapply(airbnb[ , numeric_cols], function(x) {
+  		ifelse(is.na(x), mean(x, na.rm = TRUE), x)
+	})
+
+- Identificamos los outliners
+ 	en Room price
+		outliers <- boxplot.stats(airbnb$price)$out
+	en Minimum nights
+		outliers <- boxplot.stats(airbnb$`Minimum nights`)$out
+

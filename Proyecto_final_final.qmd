@@ -1,0 +1,43 @@
+## Libreria Air-bnb limpia
+
+-   Hemos limpiado el Excel para quedarnos sólo con los parámetros de Madrid
+
+```{r}
+library(readxl)
+airbnb <- read_excel("air-bnb-listings 2.xlsx", na = "")
+
+```
+
+### Código utilizado para la limpieza de la tabla
+
+-   Comprobamos los que tienen un 0 y lo cambiamos por NA
+
+```{r}
+airbnb[airbnb == 0] <- NA
+```
+
+-   Identificar columnas numéricas
+
+```{r}
+numeric_cols <- sapply(airbnb, is.numeric)
+```
+
+-   Imputamos valores nulos solo en columnas numéricas
+
+```{r}
+airbnb[ , numeric_cols] <- lapply(airbnb[ , numeric_cols], function(x) {
+  		ifelse(is.na(x), mean(x, na.rm = TRUE), x)
+	})
+```
+
+-   Identificamos los outliners -- en Room price
+
+```{r}
++		outliers <- boxplot.stats(airbnb$`Room Price`)$out
+```
+
+-- en Minimum nights
+
+```{r}
+		outliers <- boxplot.stats(airbnb$`Minimum nights`)$out
+```
