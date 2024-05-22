@@ -30,7 +30,8 @@ airbnb[ , numeric_cols] <- lapply(airbnb[ , numeric_cols], function(x) {
 	})
 ```
 
--   Identificamos los outliners -- en Room price
+-   Identificamos los outliners
+-- en Room price
 
 ```{r}
 +		outliers <- boxplot.stats(airbnb$`Room Price`)$out
@@ -41,3 +42,7 @@ airbnb[ , numeric_cols] <- lapply(airbnb[ , numeric_cols], function(x) {
 ```{r}
 		outliers <- boxplot.stats(airbnb$`Minimum nights`)$out
 ```
+
+
+
+

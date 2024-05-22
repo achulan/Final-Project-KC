@@ -1,0 +1,95 @@
+## Código utilizado para finalizar el Proyecto
+
+### El algoritmo de regresión lineal para predecir el precio de un inmuble
+
+#### Carga de los datos
+
+```{r}
+library(readxl)
+airbnb_data <- read_excel("air-bnb-listings 2.xlsx", na = "")
+```
+
+#### Visualización de las primeras filas
+
+```{r}
+head(airbnb_data)
+```
+
+#### Resumen de las características principales
+
+```{r}
+summary(airbnb_data)
+```
+
+#### Dimensiones del conjunto de datos
+
+```{r}
+dim(airbnb_data)
+```
+
+#### Tipos de datos de cada columna
+
+```{r}
+str(airbnb_data)
+```
+
+#### División del conjunto de datos en conjuntos de entrenamiento y prueba
+
+```{r}
+set.seed(123) # Para reproducibilidad
+indices_entrenamiento <- sample(1:nrow(airbnb_data), 0.8 * nrow(airbnb_data))
+datos_entrenamiento <- airbnb_data[indices_entrenamiento, ]
+datos_prueba <- airbnb_data[-indices_entrenamiento, ]
+```
+
+### Preprocesamiento de datos
+
+#### Eliminación de columnas irrelevantes
+
+```{r}
+airbnb_data <- subset(airbnb_data, select = -c(`Room ID`, `Host ID`, Latitud, Longitud, Location))
+```
+
+#### Imputar valores faltantes con la media:
+
+```{r}
+airbnb_data$`Room Price`[is.na(airbnb_data$`Room Price`)] <- mean(airbnb_data$`Room Price`, na.rm = TRUE)
+```
+
+### Transformación de variables categóricas a numéricas (si es necesario)
+
+#### Convertir la columna Room_type en variables dummy:
+
+```{r}
+airbnb_data <- cbind(airbnb_data, model.matrix(~ `Room type` - 1, data = airbnb_data))
+```
+
+#### Modelado: Algoritmo de regresión lineal
+
+```{r}
+modelo <- lm(`Room Price` ~ Neighbourhood + `Room type` + `Minimum nights`, data = datos_entrenamiento)
+```
+
+#### Resumen del modelo
+
+```{r}
+summary(modelo)
+```
+
+#### Predicción: Aplicar el modelo a los datos de prueba
+
+```{r}
+predicciones <- predict(modelo, newdata = datos_prueba)
+```
+
+#### Validación del modelo
+```{r}
+mse <- mean((predicciones - datos_prueba$`Room Price`)^2)
+r_squared <- cor(predicciones, datos_prueba$`Room Price`)^2
+```
+
+#### Resultados
+```{r}
+print(paste("Error cuadrático medio:", mse))
+print(paste("Coeficiente de determinación (R^2):", r_squared))
+```
