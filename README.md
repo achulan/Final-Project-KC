@@ -4,32 +4,44 @@
 
 Este proyecto tiene como objetivo hacer miau miau
 
-### Definir Data Set
+### Definición del Conjunto de Datos
 
-### PROYECTO
+El conjunto de datos utilizado en este proyecto proviene de Airbnb y contiene información sobre listados de alojamientos en la ciudad de Madrid, España. A continuación, se proporciona un resumen de las principales características del conjunto de datos:
 
-#### 1. Definir Data Set
-- Utilización de múltiples conjuntos de datos, incluyendo información de Starbucks, datos socio-demográficos y datos sobre lugares relevantes en Nueva York.
+- **Dimensiones**: El conjunto de datos consta de 21,255 filas y 10 columnas.
+- **Columnas Principales**:
+  1. **Room ID**: Identificador único de la habitación.
+  2. **Host ID**: Identificador único del anfitrión.
+  3. **Neighbourhood**: Barrio donde se encuentra el alojamiento.
+  4. **Room type**: Tipo de habitación (por ejemplo, apartamento completo, habitación privada).
+  5. **Room Price**: Precio del alojamiento por noche.
+  6. **Minimum nights**: Número mínimo de noches para reservar.
+  7. **Rooms rent by the host**: Número de habitaciones que el anfitrión tiene en alquiler.
+  8. **Availability**: Número de días disponibles para reservar en un año.
+  9. **Coordinates**: Coordenadas geográficas del alojamiento.
+  10. **Location**: Ubicación del alojamiento (país, ciudad, barrio).
 
-#### 2. Arquitectura y validación de los datos
+Este conjunto de datos es crucial para nuestro análisis exploratorio y modelado predictivo, ya que contiene información detallada sobre los alojamientos disponibles en Madrid, lo que nos permitirá realizar predicciones y extraer información relevante para nuestro proyecto.
+
+### Arquitectura y validación de los datos
    a. Muestreo y exploración inicial de los datos.
    b. Implementación de un Datawarehouse para almacenar y procesar la información.
    c. Ingesta de datos utilizando un proceso ETL para cargar los datos en el Datawarehouse y validación de su correcta carga.
 
-#### 3. Análisis Exploratorio
+### Análisis Exploratorio
 - Análisis estadísticos detallados utilizando R y Python, incluyendo:
    a. Revisión de la calidad de los datos.
    b. Detección de outliers y posterior imputación de valores nulos.
    c. Visualización de distribuciones mediante boxplots, histogramas, etc.
    d. Normalización de los valores de las tablas según sea necesario.
 
-#### 4. Visualización de las métricas
+### Visualización de las métricas
 - Utilización de los datos de Airbnb para obtener KPIs relevantes y creación de un dashboard interactivo que responda a una pregunta relevante sobre los datos.
 
-#### 5. Pre-procesamiento y Modelado
+### Pre-procesamiento y Modelado
 - Pre-procesamiento de los datos seguido por la creación de un algoritmo de regresión lineal para predecir el precio de un inmueble en función de características seleccionadas.
 
-#### 6. Informe
+### Informe
 - Presentación de un informe detallado simulando la presentación de resultados en un entorno empresarial, incluyendo:
    - Suposiciones iniciales y su validación.
    - Evaluación de las métricas seleccionadas y la efectividad del modelo.
