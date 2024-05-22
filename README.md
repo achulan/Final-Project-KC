@@ -21,7 +21,7 @@ El conjunto de datos utilizado en este proyecto proviene de Airbnb y contiene in
   9. **Coordinates**: Coordenadas geográficas del alojamiento.
   10. **Location**: Ubicación del alojamiento (país, ciudad, barrio).
 
-Este conjunto de datos es crucial para nuestro análisis exploratorio y modelado predictivo, ya que contiene información detallada sobre los alojamientos disponibles en Madrid, lo que nos permitirá realizar predicciones y extraer información relevante para nuestro proyecto.
+Estos datos osn importantes para nuestro análisis exploratorio y modelado predictivo, ya que contiene información detallada sobre los alojamientos disponibles en Madrid, lo que nos permitirá realizar predicciones y extraer información relevante para nuestro proyecto.
 
 ### Arquitectura y validación de los datos
    a. Muestreo y exploración inicial de los datos.
@@ -39,7 +39,12 @@ Este conjunto de datos es crucial para nuestro análisis exploratorio y modelado
 - Utilización de los datos de Airbnb para obtener KPIs relevantes y creación de un dashboard interactivo que responda a una pregunta relevante sobre los datos.
 
 ### Pre-procesamiento y Modelado
-- Pre-procesamiento de los datos seguido por la creación de un algoritmo de regresión lineal para predecir el precio de un inmueble en función de características seleccionadas.
+- Para finalizar el proyecto se llevan a cabo un pequeño resumen de todo:
+1. **Carga de datos**: Se utilizaron datos de listados de Airbnb en Madrid.
+2. **Preprocesamiento**: Eliminación de columnas irrelevantes e imputación de valores faltantes.
+3. **Transformación de variables**: Conversión de variables categóricas a numéricas para el modelado.
+4. **Modelado**: Se ajustó un modelo de regresión lineal para predecir los precios de las habitaciones.
+5. **Validación del modelo**: Evaluación del rendimiento del modelo y cálculo de métricas de error.
 
 ### Informe
 - Presentación de un informe detallado simulando la presentación de resultados en un entorno empresarial, incluyendo:
