@@ -47,8 +47,12 @@ Estos datos osn importantes para nuestro análisis exploratorio y modelado predi
 5. **Validación del modelo**: Evaluación del rendimiento del modelo y cálculo de métricas de error.
 
 ### Informe
-- Presentación de un informe detallado simulando la presentación de resultados en un entorno empresarial, incluyendo:
-   - Suposiciones iniciales y su validación.
-   - Evaluación de las métricas seleccionadas y la efectividad del modelo.
-   - Reflexiones sobre lo aprendido y posibles mejoras en el enfoque del proyecto.
-   - Conclusiones y lecciones aprendidas.
+El proyecto concluyó con la presentación de un informe detallado que simula la presentación de resultados en un entorno empresarial. En este informe se incluyeron suposiciones iniciales y su validación, la evaluación de las métricas seleccionadas y la efectividad del modelo, reflexiones sobre lo aprendido y posibles mejoras en el enfoque del proyecto, así como conclusiones y lecciones aprendidas.
+
+1. **Conclusiones Finales:** Tras analizar los datos de Airbnb en Madrid, se identificaron varias tendencias y hallazgos clave que proporcionan una visión detallada del mercado de alquileres a corto plazo en la ciudad. Se observó una alta ocupación en barrios céntricos, variabilidad en los precios, y una preferencia por apartamentos completos y habitaciones privadas. También se destacó el impacto en la comunidad, con preocupaciones sobre gentrificación y seguridad.
+
+2. **Lecciones Aprendidas:** Durante el proyecto, se adquirieron habilidades esenciales para el análisis de datos, incluyendo la definición de un dataset adecuado, la arquitectura y validación de datos, el análisis exploratorio, la visualización de métricas y el modelado de regresión lineal. Se destacó la importancia de comprender la estructura y contenido del dataset, así como la aplicación de técnicas para mejorar la calidad de los datos y desarrollar modelos predictivos efectivos.
+
+Este proyecto proporcionó una comprensión profunda del ciclo de vida del análisis de datos y el uso de herramientas y técnicas clave para el análisis y modelado de datos.
+
+
