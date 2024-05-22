@@ -2,7 +2,7 @@
 
 ## Keepcoding project: [Airbnb](https://public.opendatasoft.com/explore/dataset/air-bnb-listings/export/?disjunctive.neighbourhood&disjunctive.column_10&disjunctive.city&q=Madrid&sort=minimum_nights&location=7,40.5931,-4.422&basemap=jawg.light)
 
-Este proyecto tiene como objetivo hacer miau miau
+El objetivo general de este proyecto final es aplicar todos los conocimientos adquiridos durante el curso a través de un análisis completo de un conjunto de datos extraídos de Airbnb. El proyecto abarca desde la definición del dataset hasta la presentación de los resultados en un informe detallado, pasando por la exploración y validación de los datos, el análisis exploratorio, la visualización de métricas relevantes, el preprocesamiento y modelado de los datos. La meta es demostrar la capacidad para llevar a cabo todas estas etapas de manera efectiva, identificando patrones, tendencias y características significativas en los datos que puedan ser útiles para la toma de decisiones en un entorno empresarial.
 
 ### Definición del Conjunto de Datos
 
